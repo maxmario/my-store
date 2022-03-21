@@ -4,9 +4,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Curso fundamentos de Angular
 
+## Create app
+
+ng new my-store
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+also can run in different port `ng serve -o --port=3500`
 
 ## Code scaffolding
 
