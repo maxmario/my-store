@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-store';
+  name = 'Mario';
+  age = 32;
+  img = 'https://static.platzi.com/media/meta_tags/og/OG-platzi-Dic-2019.png';
 }
