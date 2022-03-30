@@ -1,7 +1,17 @@
+<h1>*ngSwitch</h1>
+<input type="text" required="true" [(ngModel)]="person.name"/>
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Miriam' else myBlock">Soy Miriam</p>
+  <p *ngSwitchCase="'Mario' else myBlock">Soy Mario</p>
+  <p *ngSwitchCase="'Angel' else myBlock">Soy Angel</p>
+  <p *ngSwitchDefault>No hace match</p>
+</div>
+<hr>
+
 <h1>*ngFor Objects</h1>
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
-    <img width="250" [src]="product.image" alt="image">
+    <img [src]="product.image" alt="image">
     <h2>{{ product.price }}</h2>
     <p>{{ product.name }}</p>
   </div>
@@ -40,7 +50,8 @@
 <h1>*ngIf</h1>
 <input type="text" required="true" [(ngModel)]="person.name"/>
 <p *ngIf="person.name === 'Mario' && person.age === 18 else myBlock ">Soy Mario</p>
-<p *ngIf="person.name === 'Miriam'">Soy Miriam</p>
+<p *ngIf="person.name === 'Miriam' else myBlock">Soy Miriam</p>
+<p *ngIf="person.name === 'Angel' else myBlock">Soy Angel</p>
 <ng-template #myBlock>
   <p>Bloque de else</p>
 </ng-template>
@@ -80,4 +91,4 @@
 <h2>{{ 'Hola Mundo'.repeat(5) }}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>hola soy {{ name }} y tengo {{ age }} años</h3>
-<img src="{{ img }}" alt="image" />
+<img width="200" src="{{ img }}" alt="image" />
