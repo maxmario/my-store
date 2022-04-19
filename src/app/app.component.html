@@ -1,3 +1,27 @@
+<h1>formulario</h1>
+<form (ngSubmit)="onRegister()" #myform="ngForm">
+  <div class="input-group">
+    <label for="name">Nombre</label>
+    <input type="text" name="name" required id="name" [(ngModel)]="register.name" />
+    <p>Mensaje de error</p>
+  </div>
+  <div class="input-group">
+    <label for="email">email</label>
+    <input type="email" name="email" required id="email" [(ngModel)]="register.email" />
+    <p>Mensaje de error</p>
+  </div>
+  <div class="input-group">
+    <label for="password">Password</label>
+    <input type="password" name="password" required id="password" [(ngModel)]="register.password" />
+    <p>Mensaje de error</p>
+  </div>
+  <button [disabled]="myform.invalid" type="submit">Registrar</button>
+  <!-- En caso de necesitar mas botones dentro de nuestro formulario
+  es necesario colocar el type button para que este no lo tome como un submit -->
+  <!-- <button type="button">Acction</button>  -->
+</form>
+<hr>
+
 <h1>NgClass & NgStyle</h1>
 <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name" />
   <hr class="line-error"
